@@ -6,19 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="./libs/jquery-ui.css">
+    
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Rodri Shop</title>
   </head>
   <body>
 
-    <h1>Привет</h1>
+    <header class="bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#!">
+            Rodri-Shop
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav flex-wrap">
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="#!"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="#!"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="#!"><i class="fa fa-vk"></i></a>
+              </li>
+              <li class="nav-item pl-3">
+                <a class="nav-link" href="#!"><i class="fa fa-facebook"></i></a>
+              </li>        
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-3">
+            <div class="card-filter p-3 mb-5">
+              <h5>Диапазон цен</h5>
+              <form>
+                <input class="form-control mb-3" name="price" id="price">
+                <div id="slider-range"></div>
+                
+                <div class="pt-5 pb-3">
+                  <label for="name">Текущая дата:</label>
+                  <input type="date" id="myDate" name="join_date" class="w-100" />
+                </div>
+                
+                <div class="pt-4 pb-3">
+                  <input type="checkbox" id="two_factor_authentication" name="two_factor_authentication" checked>
+                  <label for="scales">Двухфакторная аутентификация</label>
+                </div>
+                <div class="pb-3">
+                  <input type="checkbox" id="photo_checkbox" name="photo_checkbox">
+                  <label for="photo_checkbox">Фото</label>
+                </div>
+                <div class="pb-3">
+                  <input type="checkbox" id="username_checkbox" name="username_checkbox">
+                  <label for="username_checkbox">Имя пользователя</label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-xl-9">
+
+            <div class="wrapper">
+              <table class="table table-bordered mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Текущая дата</th>
+                    <th scope="col">Двухфакторная аутентификация</th>
+                    <th scope="col">Отлежка</th>
+                    <th scope="col">Фото</th>
+                    <th scope="col">Имя пользователя</th>
+                    <th scope="col">Цена</th>
+                    <th scope="col">Кол-во</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">17.10.2020</td>
+                    <td>Есть</td>
+                    <td>5+</td>
+                    <td>Есть</td>
+                    <td>Нет</td>
+                    <td>5₽</td>
+                    <td>300</td>
+                    <td>
+                      <button>Купить</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">17.10.2020</td>
+                    <td>Есть</td>
+                    <td>5+</td>
+                    <td>Есть</td>
+                    <td>Нет</td>
+                    <td>5₽</td>
+                    <td>300</td>
+                    <td>
+                      <button>Купить</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td scope="row">17.10.2020</td>
+                    <td>Есть</td>
+                    <td>5+</td>
+                    <td>Есть</td>
+                    <td>Нет</td>
+                    <td>5₽</td>
+                    <td>300</td>
+                    <td>
+                      <button>Купить</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            
+
+          </div>
+        </div>
+      </div>
+    </main>
 
 
 
+
+    <footer></footer>
+
+    
+
+    
+
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./libs/jquery.js"></script>
+    <script src="./libs/jquery-ui.js"></script>
+    <script src="./libs/script-scroll.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
