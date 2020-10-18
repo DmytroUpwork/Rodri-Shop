@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="./libs/ui/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -49,141 +50,64 @@
     <main>
       <div class="container pt-5 pb-5">
         <div class="row">
-          <div class="col-xl-3">
-            <div class="card-border-shadow p-3 mb-5">
-              <h5>Диапазон цен</h5>
-              <form>
-                <!-- <input class="form-control mb-3" name="price" id="price"> -->
-                <div class="d-flex">
-                  <input class="form-control mb-3 mr-1 w-50" name="min-price" id="min-price">
-                  <input class="form-control mb-3 ml-1 w-50" name="max-price" id="max-price">
+          <div class="col-xl-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-end">
+                    <h4>Статистика продаж</h4>
+                    <div class="dropdown chart-dropdown">
+                        <button class="btn btn-sm border-0 dropdown-toggle px-0" type="button" id="dropdownItem1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            За последние 7 дней
+                            <!-- <i class="fa fa-angle-down"></i> -->
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem1">
+                            <a class="dropdown-item" href="#"> За день </a>
+                            <a class="dropdown-item" href="#"> За неделю </a>
+                            <a class="dropdown-item" href="#"> За месяц </a>
+                        </div>
+                    </div>
                 </div>
-                <div id="slider-range"></div>
-                <div class="pt-5 pb-3">
-                  <label for="myDate">Текущая дата:</label>
-                  <input type="date" id="myDate" name="join_date" class="w-100" />
+                <div class="card-content">
+                    <div class="card-body pt-0">
+                        <div id="statistics-chart" class="mb-1"></div>
+                        <div class="chart-info d-flex justify-content-between mb-1">
+                            <div class="series-info d-flex align-items-center">
+                                <i class="fa fa-line-chart icon-monitor font-medium-2 text-primary"></i>
+                                <span class="text-bold-600 mx-50">Товар 1</span>
+                                <span> - 58.6%</span>
+                            </div>
+                            <div class="series-result">
+                                <span>2%</span>
+                                <i class="fa fa-long-arrow-up icon-arrow-up text-success"></i>
+                            </div>
+                        </div>
+                        <div class="chart-info d-flex justify-content-between mb-1">
+                            <div class="series-info d-flex align-items-center">
+                                <i class="fa fa-line-chart icon-tablet font-medium-2 text-warning"></i>
+                                <span class="text-bold-600 mx-50">Товар 2</span>
+                                <span> - 34.9%</span>
+                            </div>
+                            <div class="series-result">
+                                <span>8%</span>
+                                <i class="fa fa-long-arrow-up icon-arrow-up text-success"></i>
+                            </div>
+                        </div>
+                        <div class="chart-info d-flex justify-content-between mb-50">
+                            <div class="series-info d-flex align-items-center">
+                                <i class="fa fa-line-chart icon-tablet font-medium-2 text-danger"></i>
+                                <span class="text-bold-600 mx-50">Товар 3</span>
+                                <span> - 6.5%</span>
+                            </div>
+                            <div class="series-result">
+                                <span>-5%</span>
+                                <i class="fa fa-long-arrow-down icon-arrow-down text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="pb-3">
-                  <label for="name">Дата последнего посещения:</label>
-                  <input type="date" id="name" name="join_date" class="w-100" value="2018-07-22" />
-                </div>
-                <div class="pt-4 pb-3">
-                  <input type="checkbox" id="two_factor_authentication" name="two_factor_authentication" checked>
-                  <label for="scales">Двухфакторная аутентификация</label>
-                </div>
-                <div class="pb-3">
-                  <input type="checkbox" id="photo_checkbox" name="photo_checkbox">
-                  <label for="photo_checkbox">Фото</label>
-                </div>
-                <div class="pb-3">
-                  <input type="checkbox" id="username_checkbox" name="username_checkbox">
-                  <label for="username_checkbox">Имя пользователя</label>
-                </div>
-              </form>
             </div>
           </div>
-          <div class="col-xl-9">
-            <div class="wrapper card-border-shadow">
-              <table class="product-table-to-buy table-bordered mb-0">
-                <thead>
-                  <tr>
-                    <th scope="col">Текущая дата</th>
-                    <th scope="col">Двухфакторная аутентификация</th>
-                    <th scope="col">Отлежка</th>
-                    <th scope="col">Фото</th>
-                    <th scope="col">Имя пользователя</th>
-                    <th scope="col">Цена</th>
-                    <th scope="col">Кол-во</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#exampleModal">
-                    <th scope="row">17.10.2020</th>
-                    <td>Есть</td>
-                    <td>5+</td>
-                    <td>Есть</td>
-                    <td>Нет</td>
-                    <td>5₽</td>
-                    <td>300</td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Купить</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="col-xl-6">
+            
           </div>
         </div>
       </div>
@@ -252,11 +176,18 @@
     
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
     <script src="./libs/jquery.js"></script>
     <script src="./libs/ui/jquery-ui.js"></script>
     <script src="./libs/script-scroll.js"></script>
+
+
+    <script src="./libs/dashboard-analytics/vendors.min.js"></script>
+    <script src="./libs/dashboard-analytics/apexcharts.js"></script>
+    <script src="./libs/dashboard-analytics/dashboard-ecommerce.js"></script>
+
+
+
     <script src="./js/script.js"></script>
   </body>
 </html>
