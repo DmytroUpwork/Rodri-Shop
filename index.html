@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.css">
 
-    <link rel="stylesheet" href="./libs/jquery-ui.css">
+    <link rel="stylesheet" href="./libs/ui/jquery-ui.css">
     
     <link rel="stylesheet" href="./css/style.css">
 
@@ -50,7 +50,7 @@
       <div class="container pt-5 pb-5">
         <div class="row">
           <div class="col-xl-3">
-            <div class="card-filter p-3 mb-5">
+            <div class="card-filter card-border-shadow p-3 mb-5">
               <h5>Диапазон цен</h5>
               <form>
                 <input class="form-control mb-3" name="price" id="price">
@@ -79,8 +79,8 @@
 
           <div class="col-xl-9">
 
-            <div class="wrapper">
-              <table class="table table-bordered mb-0">
+            <div class="wrapper card-border-shadow">
+              <table class="product-table-to-buy table-bordered mb-0">
                 <thead>
                   <tr>
                     <th scope="col">Текущая дата</th>
@@ -102,7 +102,7 @@
                     <td>5₽</td>
                     <td>300</td>
                     <td>
-                      <button>Купить</button>
+                      <button type="button" class="btn btn-primary">Купить</button>
                     </td>
                   </tr>
                   <tr>
@@ -114,7 +114,7 @@
                     <td>5₽</td>
                     <td>300</td>
                     <td>
-                      <button>Купить</button>
+                      <button type="button" class="btn btn-primary">Купить</button>
                     </td>
                   </tr>
                   <tr>
@@ -126,7 +126,7 @@
                     <td>5₽</td>
                     <td>300</td>
                     <td>
-                      <button>Купить</button>
+                      <button type="button" class="btn btn-primary">Купить</button>
                     </td>
                   </tr>
                 </tbody>
@@ -155,7 +155,8 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="./libs/jquery.js"></script>
-    <script src="./libs/jquery-ui.js"></script>
+    <script src="./libs/ui/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="./libs/script-scroll.js"></script>
     <script src="./js/script.js"></script>
   </body>
