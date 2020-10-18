@@ -47,4 +47,28 @@
 .wrapper table.product-table-to-buy tbody tr td:last-child {
   background-color: transparent;
 }
+
+.button-history-back {
+  position: absolute;
+  right: 54px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.button-history-back:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.container-login-form {
+  padding: 200px 0;
+}
+
+.container-login-form .container-login-form__adminForm {
+  width: 50%;
+  margin: auto;
+}
+
+.container-login-form .container-login-form__adminForm form .form-group .btn {
+  padding: 5px 46px;
+}
 /*# sourceMappingURL=style.css.map */
