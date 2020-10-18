@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./libs/ui/jquery-ui.css">
+    <link rel="stylesheet" href="./libs/bootstrap-select/bootstrap-select.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Rodri Shop</title>
   </head>
@@ -51,63 +51,108 @@
       <div class="container pt-5 pb-5">
         <div class="row">
           <div class="col-xl-6">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-end">
+            <!-- НАЧАЛО: График статистики ======================== -->
+            <div class="card-border-shadow p-3">
+                <div class="card-header d-flex justify-content-between align-items-end border-0 p-0 bg-transparent">
                     <h4>Статистика продаж</h4>
-                    <div class="dropdown chart-dropdown">
-                        <button class="btn btn-sm border-0 dropdown-toggle px-0" type="button" id="dropdownItem1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            За последние 7 дней
-                            <!-- <i class="fa fa-angle-down"></i> -->
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem1">
-                            <a class="dropdown-item" href="#"> За день </a>
-                            <a class="dropdown-item" href="#"> За неделю </a>
-                            <a class="dropdown-item" href="#"> За месяц </a>
-                        </div>
-                    </div>
+                    <select class="selectpicker">
+                      <option>Продажи за день</option>
+                      <option>Продажи за неделю</option>
+                      <option>Продажи за месяц</option>
+                    </select>
                 </div>
-                <div class="card-content">
-                    <div class="card-body pt-0">
+                <hr>
+                <div class="card-content p-0">
+                    <div class="card-body p-0">
                         <div id="statistics-chart" class="mb-1"></div>
-                        <div class="chart-info d-flex justify-content-between mb-1">
+                        <div class="chart-info d-flex justify-content-between mb-3">
                             <div class="series-info d-flex align-items-center">
                                 <i class="fa fa-line-chart icon-monitor font-medium-2 text-primary"></i>
                                 <span class="text-bold-600 mx-50">Товар 1</span>
                                 <span> - 58.6%</span>
                             </div>
                             <div class="series-result">
-                                <span>2%</span>
+                                <span>120 шт</span>
                                 <i class="fa fa-long-arrow-up icon-arrow-up text-success"></i>
                             </div>
                         </div>
-                        <div class="chart-info d-flex justify-content-between mb-1">
+                        <div class="chart-info d-flex justify-content-between mb-3">
                             <div class="series-info d-flex align-items-center">
                                 <i class="fa fa-line-chart icon-tablet font-medium-2 text-warning"></i>
                                 <span class="text-bold-600 mx-50">Товар 2</span>
                                 <span> - 34.9%</span>
                             </div>
                             <div class="series-result">
-                                <span>8%</span>
+                                <span>80 шт</span>
                                 <i class="fa fa-long-arrow-up icon-arrow-up text-success"></i>
                             </div>
                         </div>
-                        <div class="chart-info d-flex justify-content-between mb-50">
+                        <div class="chart-info d-flex justify-content-between mb-5">
                             <div class="series-info d-flex align-items-center">
                                 <i class="fa fa-line-chart icon-tablet font-medium-2 text-danger"></i>
                                 <span class="text-bold-600 mx-50">Товар 3</span>
                                 <span> - 6.5%</span>
                             </div>
                             <div class="series-result">
-                                <span>-5%</span>
+                                <span>-1 шт</span>
                                 <i class="fa fa-long-arrow-down icon-arrow-down text-danger"></i>
                             </div>
                         </div>
-                    </div>
+                        <div class="chart-info d-flex justify-content-between mb-3">
+                            <div class="series-info d-flex align-items-center">
+                                <i class="fa fa-check icon-tablet font-medium-2 text-success"></i>
+                                <span class="text-bold-600 mx-50">Всего:</span>
+                                <span> 100%</span>
+                            </div>
+                            <div class="series-result">
+                                <span>199 шт</span>
+                            </div>
+                        </div>
+                      </div>
                 </div>
             </div>
+            <!-- КОНЕЦ: График статистики ======================== -->
           </div>
           <div class="col-xl-6">
-            
+
+            <div class="card-border-shadow p-3 mb-5">
+              <form>
+                <div class="card-header d-flex justify-content-between align-items-end border-0 p-0 bg-transparent">
+                    <h4>Добавить аккаунт</h4>
+                    <select class="selectpicker">
+                      <option>Бизнес аккаунт</option>
+                      <option>Личный аккаунт</option>
+                      <option>Другой аккаунт</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="pt-4 pb-3">
+                  <input type="checkbox" id="two_factor_authentication" name="two_factor_authentication" checked>
+                  <label for="scales">Двухфакторная аутентификация</label>
+                </div>
+                <div class="pb-3">
+                  <input type="checkbox" id="photo_checkbox" name="photo_checkbox">
+                  <label for="photo_checkbox">Фото</label>
+                </div>
+                <div class="pb-3">
+                  <input type="checkbox" id="username_checkbox" name="username_checkbox">
+                  <label for="username_checkbox">Имя пользователя</label>
+                </div>
+                <div class="form-group row">
+                  <label for="FormControlPrice" class="col-sm-6 mb-0">Стоимость:</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="FormControlPrice">
+                  </div>
+                </div>
+                <hr>
+                <div class="form-group mb-3 text-center">
+                    <input type="file" class="form-control-file">
+                </div>
+                <div class="form-group text-right">
+                  <button type="submit" class="btn btn-primary">Добавить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -176,15 +221,13 @@
     
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
-    <script src="./libs/jquery.js"></script>
-    <script src="./libs/ui/jquery-ui.js"></script>
-    <script src="./libs/script-scroll.js"></script>
 
 
     <script src="./libs/dashboard-analytics/vendors.min.js"></script>
     <script src="./libs/dashboard-analytics/apexcharts.js"></script>
     <script src="./libs/dashboard-analytics/dashboard-ecommerce.js"></script>
+
+    <script src="./libs/bootstrap-select/bootstrap-select.js"></script>
 
 
 
