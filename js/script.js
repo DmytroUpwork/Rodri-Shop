@@ -8,29 +8,25 @@ $(document).ready(function () {
       max: 100,
       values: [10, 80],
       slide: function (event, ui) {
-        $("#price").val(ui.values[0] + " ₽     " + +ui.values[1] + " ₽ ");
+        // $("#price").val(ui.values[0] + " ₽     " + +ui.values[1] + " ₽ ");
+        $("#min-price").val(ui.values[0] + " ₽ ");
+        $("#max-price").val(ui.values[1] + " ₽ ");
       },
     });
-    $("#price").val(
-      $("#slider-range").slider("values", 0) +
-        " ₽     " +
-        $("#slider-range").slider("values", 1) +
-        " ₽"
-    );
+    $("#min-price").val( $("#slider-range").slider("values", 0) + " ₽ " );
+    $("#max-price").val( $("#slider-range").slider("values", 1) + " ₽ ");
+    // $("#price").val(
+    //   $("#slider-range").slider("values", 0) +
+    //     " ₽     " +
+    //     $("#slider-range").slider("values", 1) +
+    //     " ₽"
+    // );
   });
 
   // Поле текущей даты в форме =====================
   $("#myDate").val(new Date().toISOString().slice(0, 10));
 
-  // Горизонтальный скролл таблицы =================
-
-  // $(window).on("resize load scroll", function () {
-  //   if ($(window).width() <= "620") {
-  //     console.log("resize");
-  //     myScene.enabled(false);
-  //   }
-  // });
-  
+  // Горизонтальный скролл таблицы ================= 
   if ($(window).width() <= "1200") {
     $(".wrapper").mousewheel(function (e, delta) {
       this.scrollLeft -= delta * 40;

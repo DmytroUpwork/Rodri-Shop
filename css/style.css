@@ -40,8 +40,8 @@
 
 .wrapper table.product-table-to-buy tbody tr td:hover {
   background: #a2c3dd;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .wrapper table.product-table-to-buy tbody tr td:last-child {

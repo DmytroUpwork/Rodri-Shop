@@ -53,10 +53,17 @@
       <div class="container pt-5 pb-5">
         <div class="row">
           <div class="col-xl-3">
-            <div class="card-filter card-border-shadow p-3 mb-5">
+            <div class="card-border-shadow p-3 mb-5">
               <h5>Диапазон цен</h5>
               <form>
-                <input class="form-control mb-3" name="price" id="price">
+
+                <!-- <input class="form-control mb-3" name="price" id="price"> -->
+                <div class="d-flex">
+                  <input class="form-control mb-3 mr-1 w-50" name="min-price" id="min-price">
+                  <input class="form-control mb-3 ml-1 w-50" name="max-price" id="max-price">
+                </div>
+                
+
                 <div id="slider-range"></div>
                 <div class="pt-5 pb-3">
                   <label for="myDate">Текущая дата:</label>
