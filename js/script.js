@@ -19,15 +19,28 @@ $(document).ready(function () {
     );
   });
 
-
   // Поле текущей даты в форме =====================
   $("#myDate").val(new Date().toISOString().slice(0, 10));
 
-  $(".wrapper").mousewheel(function (e, delta) {
-    this.scrollLeft -= delta * 40;
-    e.preventDefault();
-  });
+  // Горизонтальный скролл таблицы =================
+
+  // $(window).on("resize load scroll", function () {
+  //   if ($(window).width() <= "620") {
+  //     console.log("resize");
+  //     myScene.enabled(false);
+  //   }
+  // });
   
+  if ($(window).width() <= "1200") {
+    $(".wrapper").mousewheel(function (e, delta) {
+      this.scrollLeft -= delta * 40;
+      e.preventDefault();
+    });
+  } 
+  // $(".wrapper").mousewheel(function (e, delta) {
+  //   this.scrollLeft -= delta * 40;
+  //   e.preventDefault();
+  // });
   
 });
 

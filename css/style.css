@@ -10,7 +10,6 @@
 }
 
 .wrapper {
-  width: 100%;
   overflow-x: auto;
 }
 
@@ -27,6 +26,10 @@
   border-bottom-color: transparent;
   border-top-color: transparent;
   padding: 10px;
+}
+
+.wrapper table.product-table-to-buy tbody tr th {
+  background: #cbdfef;
 }
 
 .wrapper table.product-table-to-buy tbody tr td {
