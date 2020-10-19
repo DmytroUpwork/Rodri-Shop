@@ -22,7 +22,7 @@ $(document).ready(function () {
     //     " ₽"
     // );
   });
-  $("#slider-range").draggable();
+  $(".ui-slider-handle").draggable();
 
 
   // Поле текущей даты в форме =====================
