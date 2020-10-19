@@ -73,6 +73,13 @@ a.nav-link span {
   color: rgba(0, 0, 0, 0.7) !important;
 }
 
+@media all and (max-width: 768px) {
+  .button-history-back {
+    right: 15px;
+    top: 31px;
+  }
+}
+
 .container-login-form {
   padding: 200px 15px;
 }
