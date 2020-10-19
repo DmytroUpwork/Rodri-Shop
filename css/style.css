@@ -128,4 +128,12 @@ a.nav-link span {
             flex-direction: column;
   }
 }
+
+.form-account-selection {
+  display: none;
+}
+
+.active-account-selected {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */
