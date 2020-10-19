@@ -93,4 +93,28 @@ a.nav-link span {
 .container-login-form .container-login-form__adminForm form .form-group .btn {
   padding: 5px 46px;
 }
+
+@media all and (max-width: 768px) {
+  .card-box-chart .card-box-chart__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .card-form-account-add {
+    margin-top: 40px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .card-form-account-add .card-form-account-add__form .card-form-account-add__form_header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style.css.map */
