@@ -22,6 +22,8 @@ $(document).ready(function () {
     //     " ₽"
     // );
   });
+  $("#slider-range").draggable();
+
 
   // Поле текущей даты в форме =====================
   $("#myDate").val(new Date().toISOString().slice(0, 10));
