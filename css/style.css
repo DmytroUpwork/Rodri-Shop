@@ -64,6 +64,7 @@ a.nav-link span {
 
 .wrapper table.product-table-to-buy tbody tr td:last-child {
   background-color: transparent;
+  text-align: center;
 }
 
 .button-history-back {
